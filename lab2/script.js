@@ -18,28 +18,29 @@ document.querySelector('#romb').innerHTML = 'Площа ромба = a*h = '+ a 
 
 
 // Завдання 3 -----------------------------------------------------------------------
-let task3 = 'triangle';
 let btn = document.querySelector('#btn');
 btn.onclick = function () {
     let a_t = Number(document.getElementById('a').value);
     let b_t = Number(document.getElementById('b').value);
     let c_t = Number(document.getElementById('c').value);
     if (a_t + c_t > b_t && a_t + b_t > c_t && c_t + b_t > a_t) {
+        let task3 = 'triangle';
         let value = 'Трикутник зі сторонами '+a_t+', '+b_t+' і '+c_t+' існує';
         setCookie(task3, value, 365);
     }
     else {
         let value = 'Трикутника зі сторонами '+a_t+', '+b_t+' і '+c_t+' не існує';
+        let task3 = 'triangle';
         setCookie(task3, value, 365);
     }
 
     alert(getCookie(task3));
 }
 
-if (getCookie("task3") != "") {
+if (getCookie("triangle") != "") {
     let delete_cookie = confirm('Видалити кукі файли?');
     if (delete_cookie) {
-        deleteC("task3");
+        deleteC("triangle");
     }
 }
 
