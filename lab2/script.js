@@ -34,27 +34,11 @@ btn.onclick = function () {
     }
 }
 
-function deleteC() {
-    if (getCookie("triangle") != "") {
-        let delete_cookie = confirm('Записане кукі: '+getCookie("triangle")+'\nВидалити кукі файли?');
-        if (delete_cookie) {
-            document.cookie = 'triangle=;expires=Thu, 01 Jan 1970 00:00:01 GMT';
-            alert('Кукі видалено')
-        }
-    }
-}
-
 
 // Завдання 4 ------------------------------------------------------------------------
 let cur = document.querySelector('#cur');
 let italic = "italic";
 let normal = "normal";
-
-if (localStorage.saveFontStyleItalic == true) {
-    cur.style.fontStyle = italic;
-} else if (localStorage.saveFontStyleItalic == false) {
-    cur.style.fontStyle = normal;
-}
 
 function mouse_italic(object) {
     if (cur.style.fontStyle == italic) {
@@ -69,12 +53,10 @@ let ratio_normal = document.querySelector('#ratio_normal');
 
 ratio_italic.onclick = function (){
     localStorage.saveFontStyleItalic = true;
-    alert("Збереено курсивной шрифт");
 }
 
 ratio_normal.onclick = function (){
     localStorage.saveFontStyleItalic = false;
-    alert("Збереено нормальний шрифт");
 }
 
 
@@ -86,16 +68,12 @@ btn2.onclick = function (){
 
     while (true) {
         let data = prompt("Уведіть текст для елемента списка", "");
-
         if (!data) {
             break;
         }
-
         let li = document.createElement('li');
         li.textContent = data;
         ul.append(li);
-        // localStorage.five = li;
-        // console.log(localStorage.five);
     }
 }
 
@@ -134,5 +112,23 @@ function checkCookie(cname) {
         if (user != "" && user != null) {
             setCookie("username", user, 365);
         }
+    }
+}
+
+function onload_function() {
+    
+    if (getCookie("triangle") != "") {
+        let delete_cookie = confirm('Записане кукі: '+getCookie("triangle")+'\nВидалити кукі файли?');
+        if (delete_cookie) {
+            document.cookie = 'triangle=;expires=Thu, 01 Jan 1970 00:00:01 GMT';
+            alert('Кукі видалено')
+        }
+    }
+    
+    let cursor = document.querySelector('#cur');
+    if (localStorage.saveFontStyleItalic == true) {
+        cursor.style.fontStyle = "italic";
+    } else if (localStorage.saveFontStyleItalic == false) {
+        cursor.style.fontStyle = "normal";
     }
 }
