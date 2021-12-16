@@ -37,6 +37,12 @@ btn.onclick = function () {
     alert(getCookie(task3));
 }
 
+if (getCookie("task3") != "") {
+    let delete_cookie = confirm('Видалити кукі файли?');
+    if (delete_cookie) {
+        deleteC("task3");
+    }
+}
 
 // Завдання 4 ------------------------------------------------------------------------------
 // let cur = document.querySelector('#cur');
@@ -110,8 +116,7 @@ function checkCookie(cname) {
     }
 }
 
-let delete_cookie = confirm('Видалити кукі файли?');
-if (delete_cookie == "True") {
-    document.cookie = task3"=";expires=Thu, 01 Jan 1970 00:00:01 GMT';
-    alert('Кукі видалено');
+function deleteC(cname) {
+    document.cookie = cname + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT';
+    alert('Кукі видалено')
 }
