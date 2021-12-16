@@ -37,13 +37,6 @@ btn.onclick = function () {
     alert(getCookie(task3));
 }
 
-if (getCookie("triangle") != "") {
-    let delete_cookie = confirm('Видалити кукі файли?');
-    if (delete_cookie) {
-        deleteC("triangle");
-    }
-}
-
 
 // Завдання 4 ------------------------------------------------------------------------------
 // let cur = document.querySelector('#cur');
@@ -118,6 +111,10 @@ function checkCookie(cname) {
 }
 
 function deleteC(cname) {
-    document.cookie = cname + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT';
-    alert('Кукі видалено')
+    if (getCookie("triangle") != "") {
+    let delete_cookie = confirm('Видалити кукі файли?');
+    if (delete_cookie) {
+        document.cookie = 'triangle=;expires=Thu, 01 Jan 1970 00:00:01 GMT';
+        alert('Кукі видалено')
+    }
 }
