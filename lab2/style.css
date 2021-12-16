@@ -85,8 +85,7 @@ footer input{
 #romb{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    padding: 20px;
     margin-left: -20px;
 }
 ul li:nth-child(2n) {background-color:#ccf}
