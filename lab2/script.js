@@ -53,10 +53,12 @@ let ratio_normal = document.querySelector('#ratio_normal');
 
 ratio_italic.onclick = function (){
     localStorage.saveFontStyleItalic = true;
+    cur.style.fontStyle = italic;
 }
 
 ratio_normal.onclick = function (){
     localStorage.saveFontStyleItalic = false;
+    cur.style.fontStyle = normal;
 }
 
 
