@@ -18,38 +18,26 @@ document.querySelector('#romb').innerHTML = 'Площа ромба = a*h = '+ a 
 
 
 // Завдання 3 -----------------------------------------------------------------------
+let task3 = 'triangle';
 let btn = document.querySelector('#btn');
 btn.onclick = function () {
     let a_t = Number(document.getElementById('a').value);
     let b_t = Number(document.getElementById('b').value);
     let c_t = Number(document.getElementById('c').value);
-    let name = 'triangle';
     if (a_t + c_t > b_t && a_t + b_t > c_t && c_t + b_t > a_t) {
-        
-        let value = 'Трикутник існує';
-        setCookie(name, value, 365)
-        // document.cookie = 'triangle=Трикутник зі сторонами '+a_t+', '+b_t+' і '+c_t+' існує';
-        // alert('Трикутник зі сторонами '+a_t+', '+b_t+' і '+c_t+' існує');
+        let value = 'Трикутник зі сторонами '+a_t+', '+b_t+' і '+c_t+' існує';
+        setCookie(task3, value, 365);
     }
     else {
-        let value = 'Трикутника не існує';
-        setCookie(name, value, 365)
-        // document.cookie = 'triangle=Трикутника зі сторонами '+a_t+', '+b_t+' і '+c_t+' не існує';
-        // alert('Трикутника зі сторонами '+a_t+', '+b_t+' і '+c_t+' не існує');
+        let value = 'Трикутника зі сторонами '+a_t+', '+b_t+' і '+c_t+' не існує';
+        setCookie(task3, value, 365);
     }
 
-    alert(getCookie(name));
-    console.log('Cookie:');
-    console.log(getCookie(name));
+    alert(getCookie(task3));
 }
 
 
-//     let delete_cookie = prompt('Видалити кукі файли?');
-//     alert('кукі видалено');
-//     var cookie_date = new Date();
-//     cookie_date.setMonth(cookie_date.getMonth() - 1);
-//     document.cookie = "name=user;expires=" + cookie_date.toUTCString();
-// //task number 4
+// Завдання 4 ------------------------------------------------------------------------------
 // let cur = document.querySelector('#cur');
 // localStorage.test = "italic";
 
@@ -61,7 +49,9 @@ btn.onclick = function () {
 //     cur.style.fontStyle = localStorage.test;
 //     localStorage.saveFontStyleItalic = true;
 // }
-//Завдання 5
+
+
+// Завдання 5 -----------------------------------------------------------------------------
 
 
 // let ul = document.createElement('ul');
@@ -84,19 +74,6 @@ btn.onclick = function () {
 
 // Додаткові функцції -------------------------------------------------------------
 
-// Перевірка роботи кукі
-// if (navigator.cookieEnabled === false){
-//     alert("Cookies виключені!");
-// } else {
-//     alert("Cookies включені!");
-// }
-
-document.cookie = "name=user"; 
-
-
-
-
-
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -117,5 +94,29 @@ function getCookie(cname) {
             return c.substring(name.length, c.length);
         }
     }
-    // return "";
+    return "";
+}
+
+function checkCookie(cname) {
+    var user = getCookie(cname);
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+        user = prompt("Please enter your name:", "");
+        if (user != "" && user != null) {
+            setCookie("username", user, 365);
+        }
+    }
+}
+
+
+if (getCookie(task3) != "") {
+    let delete_cookie = confirm('Видалити кукі файли?');
+    if (delete_cookie == "True") {
+        alert('Кукі видалено');
+        var cookie_date = new Date();
+        cookie_date.setMonth(cookie_date.getMonth() - 1);
+        document.cookie = task3"="";expires=" + cookie_date.toUTCString();
+    }
+
 }
