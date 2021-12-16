@@ -114,7 +114,7 @@ function checkCookie(cname) {
 
 function deleteC() {
     if (getCookie("triangle") != "") {
-        let delete_cookie = confirm('Кукі'+getCookie("triangle")+'\nВидалити кукі файли?');
+        let delete_cookie = confirm('Записане кукі: '+getCookie("triangle")+'\nВидалити кукі файли?');
         if (delete_cookie) {
             document.cookie = 'triangle=;expires=Thu, 01 Jan 1970 00:00:01 GMT';
             alert('Кукі видалено')
