@@ -47,15 +47,34 @@ function deleteC() {
 
 // Завдання 4 ------------------------------------------------------------------------
 let cur = document.querySelector('#cur');
-localStorage.test = "italic";
+let italic = "italic";
+let normal = "normal";
 
-if (localStorage.saveFontStyleItalic) {
-    cur.style.fontStyle = localStorage.test;
+if (localStorage.saveFontStyleItalic == true) {
+    cur.style.fontStyle = italic;
+} else if (localStorage.saveFontStyleItalic == false) {
+    cur.style.fontStyle = normal;
 }
 
-function bigImg(x) {
-    cur.style.fontStyle = localStorage.test;
+function mouse_italic(object) {
+    if (cur.style.fontStyle == italic) {
+        cur.style.fontStyle = normal;
+    } else {
+        cur.style.fontStyle = italic;
+    }
+}
+
+let ratio_italic = document.querySelector('#ratio_italic');
+let ratio_normal = document.querySelector('#ratio_normal');
+
+ratio_italic.onclick = function (){
     localStorage.saveFontStyleItalic = true;
+    alert("Збереено курсивной шрифт");
+}
+
+ratio_normal.onclick = function (){
+    localStorage.saveFontStyleItalic = false;
+    alert("Збереено нормальний шрифт");
 }
 
 
