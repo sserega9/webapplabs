@@ -110,13 +110,13 @@ function checkCookie(cname) {
 }
 
 
-if (getCookie(task3) != "") {
-    let delete_cookie = confirm('Видалити кукі файли?');
-    if (delete_cookie == "True") {
-        alert('Кукі видалено');
-        var cookie_date = new Date();
-        cookie_date.setMonth(cookie_date.getMonth() - 1);
-        document.cookie = task3"="";expires=" + cookie_date.toUTCString();
-    }
+// if (getCookie(task3) != "") {
+//     let delete_cookie = confirm('Видалити кукі файли?');
+//     if (delete_cookie == "True") {
+//         alert('Кукі видалено');
+//         var cookie_date = new Date();
+//         cookie_date.setMonth(cookie_date.getMonth() - 1);
+//         document.cookie = task3"="";expires=" + cookie_date.toUTCString();
+//     }
 
-}
+// }
