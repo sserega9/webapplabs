@@ -110,11 +110,12 @@ function checkCookie(cname) {
     }
 }
 
-function deleteC(cname) {
+function deleteC() {
     if (getCookie("triangle") != "") {
-    let delete_cookie = confirm('Видалити кукі файли?');
-    if (delete_cookie) {
-        document.cookie = 'triangle=;expires=Thu, 01 Jan 1970 00:00:01 GMT';
-        alert('Кукі видалено')
+        let delete_cookie = confirm('Видалити кукі файли?');
+        if (delete_cookie) {
+            document.cookie = 'triangle=;expires=Thu, 01 Jan 1970 00:00:01 GMT';
+            alert('Кукі видалено')
+        }
     }
 }
