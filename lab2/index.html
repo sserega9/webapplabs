@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 2</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrap">
         <header>
             <input type="text" value="x">
-            <p id="text-header">текст з блоку header</p>
+            <p id="text-header">Текст з блоку header</p>
         </header>
         <div class="content">
             <div class="left-block">
@@ -20,17 +20,20 @@
                         <div class="block-menu-left">
                             <div class="block-sm">
                                 <p id="cur" onmouseover="bigImg(this)">text cursive</p>
-                                
+                                <input type="radio" name="normal">
+                                <label for="#">italic</label>
+                                <input type="radio" name="normal" value="normal">
+                                <label for="#">normal</label>
                             </div>
                         </div>
                         <div class="content-big-block">
                             3
                             <h2>task3</h2>
                             <form action="#">
-                                <input type="number" placeholder="a" id="a">
-                                <input type="number" placeholder="b" id="b">
-                                <input type="number" placeholder="c" id="c">
-                                <button id="btn">перевірити чи існує такий трикутник</button>
+                                <p><input type="number" placeholder="a" id="a"></p>
+                                <p><input type="number" placeholder="b" id="b"></p>
+                                <p><input type="number" placeholder="c" id="c"></p>
+                                <button id="btn"> Перевірити чи існує такий трикутник </button>
                             </form>
                             <p id="romb"></p>
                         </div>
@@ -48,10 +51,10 @@
         </div>
         <footer>
             <input type="text" value="y">
-            <p id="text-bottom">текст з блоку footer</p>
+            <p id="text-bottom">Текст з блоку footer</p>
         </footer>
     </div>
-    
+
     <script src="./script.js"></script>
     
 </body>
