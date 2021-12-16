@@ -46,17 +46,17 @@ function deleteC() {
 
 
 // Завдання 4 ------------------------------------------------------------------------
-// let cur = document.querySelector('#cur');
-// localStorage.test = "italic";
+let cur = document.querySelector('#cur');
+localStorage.test = "italic";
 
-// if (localStorage.saveFontStyleItalic) {
-//     cur.style.fontStyle = localStorage.test;
-// }
+if (localStorage.saveFontStyleItalic) {
+    cur.style.fontStyle = localStorage.test;
+}
 
-// function bigImg(x) {
-//     cur.style.fontStyle = localStorage.test;
-//     localStorage.saveFontStyleItalic = true;
-// }
+function bigImg(x) {
+    cur.style.fontStyle = localStorage.test;
+    localStorage.saveFontStyleItalic = true;
+}
 
 
 // Завдання 5 ------------------------------------------------------------------------
