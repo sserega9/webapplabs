@@ -89,7 +89,9 @@ footer input{
     margin-left: -20px;
 }
 ul li:nth-child(2n) {background-color:#ccf}
-
 ul {
     padding-bottom: 20px;
+}
+uldiv {
+    min-height: 0;
 }
