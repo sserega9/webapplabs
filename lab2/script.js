@@ -27,14 +27,16 @@ btn.onclick = function () {
         let task3 = 'triangle';
         let value = 'Трикутник зі сторонами '+a_t+', '+b_t+' і '+c_t+' існує';
         setCookie(task3, value, 365);
+        alert(getCookie(task3));
+        return false;
     }
     else {
-        let value = 'Трикутника зі сторонами '+a_t+', '+b_t+' і '+c_t+' не існує';
         let task3 = 'triangle';
+        let value = 'Трикутника зі сторонами '+a_t+', '+b_t+' і '+c_t+' не існує';
         setCookie(task3, value, 365);
+        alert(getCookie(task3));
+        return false;
     }
-
-    alert(getCookie(task3));
 }
 
 
