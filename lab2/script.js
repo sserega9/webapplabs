@@ -65,9 +65,7 @@ ratio_normal.onclick = function (){
 // Завдання 5 ------------------------------------------------------------------------
 let btn2 = document.querySelector('#btn2');
 btn2.onclick = function (){
-    let ul = document.createElement('ul');
-    document.body.append(ul);
-
+    let ul = document.querySelector('#list');
     while (true) {
         let data = prompt("Уведіть текст для елемента списка", "");
         if (!data) {
@@ -78,7 +76,6 @@ btn2.onclick = function (){
         ul.append(li);
     }
 }
-
 
 // Додаткові функцції -------------------------------------------------------------
 
