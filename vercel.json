@@ -1,4 +1,0 @@
-{
-    "version": 2,
-    "builds": [{ "src": "lab3/app.js", "use": "@now/node-server" }]
-  }
