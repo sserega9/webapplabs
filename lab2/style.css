@@ -67,8 +67,8 @@ footer input{
     background-color:tomato;
     height: 50px;
 }
-/* task 2 js demo */
-#demo{
+
+#romb{
     width: 100%;
     display: flex;
     justify-content: flex-end;
