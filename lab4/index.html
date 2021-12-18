@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        canvas {
+            border: solid 1px;
+        }
+        #divstop {
+            display: none;
+        }
+        #divreload {
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="wrap">
+        <header>
+            <input type="text" value="x">
+            <p id="text-header">Header</p>
+        </header>
+        <div class="content">
+            <div class="left-block">
+                <div class="wrap-block">
+                    <div class="wrap-endl">
+                        <div class="block-menu-left">
+                            <div class="block-sm">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad numquam facere esse! Incidunt, cumque. Dolorum deleniti fugiat ullam, alias, reprehenderit perspiciatis provident, necessitatibus cupiditate assumenda voluptate id doloribus tenetur sequi.
+                            </div>
+                        </div>
+                        <div class="content-big-block">
+                              <canvas id="canvas" width="700" height="370"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-endl-bottom">
+                    <span>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad numquam facere esse! Incidunt, cumque. Dolorum deleniti fugiat ullam, alias, reprehenderit perspiciatis provident, necessitatibus cupiditate assumenda voluptate id doloribus tenetur sequi.
+                    </span>
+                </div>
+            </div>
+            <div class="right-block">
+                <div id="divstart"><button id="start">Start</button><br><br></div>
+                <div id="divstop"><button id="stop">Stop</button><br></div>
+                <div id="divreload"><button id="reload">Reload</button><br></div>
+                <div id="text"></div>
+            </div>
+        </div>
+        <footer>
+            <input type="text" value="y">
+            <p id="text-bottom">Footer</p>
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
