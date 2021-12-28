@@ -74,6 +74,7 @@ btn2.onclick = function (){
         let li = document.createElement('li');
         li.textContent = data;
         ul.append(li);
+        localStorage.setItem('list', data);
     }
 }
 
